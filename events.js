@@ -35,7 +35,7 @@ pageHeader.addEventListener('mouseleave', function(event){
 
 var textInput = document.getElementById('keypress-input');
 
-textInput.addEventListener('keypress', function(event){
+textInput.addEventListener('keyup', function(event){
 	//console.log("event", event.key);
   	//console.log(textInput.value);
   	 // output.innerHTML = textInput.value;
@@ -45,39 +45,51 @@ textInput.addEventListener('keypress', function(event){
 })
 //When you click the "Add color" button, the guinea-pig element's text color should change to blue.
 
+var pig = document.getElementById('guinea-pig');
+
 //Defining color change target by its id
 var addColor = document.getElementById('add-color');
 
-addColor.addEventListener('click', function(){
-    document.body.style.backgroundColor = "blue";
+//addColor.addEventListener("click", function(){
+    //document.body.style.color = "blue";
+    addColor.addEventListener('click', function(event){
+    console.log('Blue Piggy!');	
+    pig.setAttribute('class', 'color');
 });
+    
 
 //When you click the "Hulkify" button, the guinea-pig element's font size should become much larger.
 
-document.body.addEventListener('click', function(event){
-  if(event.target.id === 'make-large'){
+var makeLarge = document.getElementById('make-large')
+
+makeLarge.addEventListener('click', function(event){
+  //if(event.target.id === 'make-large'){
     console.log("Hulk Smash!");
+    pig.setAttribute('class', 'large');
     //pig.innerHTML = ;
-  }
-})
+});
 
 //When you click the "Capture it" button, the guinea-pig element should have a border added to it.
 
-document.body.addEventListener('click', function(event){
-  if(event.target.id === 'add-border'){
+var addBorder = document.getElementById('add-border')
+
+addBorder.addEventListener('click', function(event){
+  //if(event.target.id === 'add-border'){
     console.log("In the border!");
+    pig.setAttribute('class', 'border');
     //pig.innerHTML = ;
-  }
-})
+});
 
 //When you click the "Rounded" button, the guinea-pig element's border should become rounded.
 
-document.body.addEventListener('click', function(event){
-  if(event.target.id === 'add-rounding'){
+var addRounding = document.getElementById('add-rounding')
+
+addRounding.addEventListener('click', function(event){
+  //if(event.target.id === 'add-rounding'){
     console.log("Go-round!");
-    //pig.innerHTML = ;
-  }
-})
+    pig.setAttribute('class', 'rounded');
+    //pig.innerHTML = ;  
+});
 
 //The first section's text should be bold.
 
