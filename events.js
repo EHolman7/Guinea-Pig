@@ -32,7 +32,6 @@ pageHeader.addEventListener('mouseleave', function(event){
 
 //When you type characters into the input field, the output element should mirror the text in the input field.
 
-
 var textInput = document.getElementById('keypress-input');
 
 textInput.addEventListener('keyup', function(event){
@@ -93,9 +92,15 @@ addRounding.addEventListener('click', function(event){
 
 //The first section's text should be bold.
 
+console.dir(document.getElementsByClassName('article-section'));
+
+document.getElementsByClassName('article-section')[0].classList.add('intro')
 
 //The last section's text should be bold and italicized.
 
+document.getElementsByClassName('article-section')[5].classList.add('ending')
+
 //Make the buttons stop appearing next to each other as inline elements. Change them into block elements.
+
 
 
