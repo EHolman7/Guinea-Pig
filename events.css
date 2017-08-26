@@ -11,10 +11,10 @@
 	border: 5px dotted;
 	border-radius: 25%;
 }
-.intro {
+#intro {
 	font-weight: bold;
 }
-.ending{
+#ending{
 	font-weight: bold;
 	font-style: italic;
 }

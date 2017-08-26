@@ -4,12 +4,14 @@ console.log("linked to events.js");
 var output = document.getElementById('output-target');
 
 //When any section is clicked the output target text should be "You clicked on the {text of the section} section"
+
 document.body.addEventListener('click', function(event){
   if(event.target.className === 'article-section'){
-    console.log("yaaa!", event.target.innerHTML);
+    console.log("yaaa!", event);
     output.innerHTML = `<p>You clicked on the ${event.target.innerHTML} section</p>`;
   }
 })
+
 //When the mouse is over the h1 tag, the output element should contain the text "You moved your mouse over the header".
 
 //Defining the header target
@@ -94,13 +96,13 @@ addRounding.addEventListener('click', function(event){
 
 console.dir(document.getElementsByClassName('article-section'));
 
-document.getElementsByClassName('article-section')[0].classList.add('intro')
+document.getElementsByClassName('article-section')[0].id = 'intro';
 
 //The last section's text should be bold and italicized.
 
-document.getElementsByClassName('article-section')[5].classList.add('ending')
+document.getElementsByClassName('article-section')[5].id = 'ending';
 
 //Make the buttons stop appearing next to each other as inline elements. Change them into block elements.
 
-
+//document.getElementsByClassName
 
